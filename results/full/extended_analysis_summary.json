@@ -1,0 +1,102 @@
+{
+  "status": "posthoc_robustness_not_used_for_primary_model_selection",
+  "global_placebo": {
+    "repeats": 100,
+    "mean_AUROC": 0.5761659859459903,
+    "aligned_minus_mean_AUROC": 0.41888690560019304
+  },
+  "subgroups": {
+    "evaluable_groups": 17,
+    "minimum_prime_auroc_gain": 0.31242963107545874,
+    "median_prime_auroc_gain": 0.40227150153377667,
+    "all_evaluable_groups_positive": true
+  },
+  "split_sensitivity": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "minimum_prime_auroc_gain": 0.3699812798318085,
+    "maximum_prime_auroc_gain": 0.37181027335466943,
+    "all_seeds_positive": true
+  },
+  "calibration": {
+    "local_hgb": 0.23722366152967803,
+    "lineage_logistic": 0.008745258510482553,
+    "lineage_full": 0.008093754167776907,
+    "prime_fusion": 0.23895983860750744,
+    "prime_joint": 0.007646454277599128
+  },
+  "leave_one_group_out": {
+    "topology_position": {
+      "model": "lineage_without_topology",
+      "AUROC": 0.9982908810161208,
+      "drop_from_full_lineage": 0.0002718044911791395
+    },
+    "descendant_scale": {
+      "model": "lineage_without_scale",
+      "AUROC": 0.9980434950565097,
+      "drop_from_full_lineage": 0.0005191904507902967
+    },
+    "branch_context": {
+      "model": "lineage_without_branch",
+      "AUROC": 0.9974182259163724,
+      "drop_from_full_lineage": 0.0011444595909275712
+    },
+    "child_composition": {
+      "model": "lineage_without_composition",
+      "AUROC": 0.9190824785253386,
+      "drop_from_full_lineage": 0.07948020698196134
+    }
+  },
+  "group_only_models": {
+    "topology_position": {
+      "model": "lineage_topology_only",
+      "AUROC": 0.7295604214320476,
+      "AUPRC": 0.6158725575546824
+    },
+    "descendant_scale": {
+      "model": "lineage_scale_only",
+      "AUROC": 0.8719592442045495,
+      "AUPRC": 0.7187233314948829
+    },
+    "branch_context": {
+      "model": "lineage_branch",
+      "AUROC": 0.6908620380441451,
+      "AUPRC": 0.5185833302487014
+    },
+    "child_composition": {
+      "model": "lineage_composition_only",
+      "AUROC": 0.9952199033690099,
+      "AUPRC": 0.9912378681332854
+    }
+  },
+  "top_permutation_features": [
+    {
+      "feature": "child_taxon_diversity",
+      "mean_auroc_drop": 0.4248257347167745,
+      "std_auroc_drop": 0.0012037499484828563
+    },
+    {
+      "feature": "child_taxon_missing_fraction",
+      "mean_auroc_drop": 0.06640199870394761,
+      "std_auroc_drop": 0.0003862644687906894
+    },
+    {
+      "feature": "child_ancestral_fraction",
+      "mean_auroc_drop": 0.00632508069138602,
+      "std_auroc_drop": 0.00014889819122438735
+    },
+    {
+      "feature": "log_subtree_nodes",
+      "mean_auroc_drop": 0.000848403564084843,
+      "std_auroc_drop": 5.555713114023051e-05
+    },
+    {
+      "feature": "child_branch_mean",
+      "mean_auroc_drop": 0.0006062219638068855,
+      "std_auroc_drop": 2.2128069395128203e-05
+    }
+  ]
+}

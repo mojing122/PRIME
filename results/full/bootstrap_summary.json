@@ -1,0 +1,9 @@
+{
+  "families": 2355,
+  "mean_log_loss_gain": 0.35933029218749457,
+  "log_loss_gain_ci_low": 0.3568030810711203,
+  "log_loss_gain_ci_high": 0.3618839997724062,
+  "mean_macro_f1_gain": 0.4380891017895219,
+  "macro_f1_gain_ci_low": 0.4316340287647147,
+  "macro_f1_gain_ci_high": 0.4447010804654259
+}

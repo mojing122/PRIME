@@ -1,0 +1,143 @@
+{
+  "seed": 42,
+  "bootstrap_repeats": 2000,
+  "placebo_repeats": 100,
+  "rows_by_split": {
+    "train": 1084313,
+    "validation": 227224,
+    "test": 228803
+  },
+  "families_by_split": {
+    "train": 10976,
+    "validation": 2352,
+    "test": 2355
+  },
+  "features": {
+    "local": [
+      "incoming_branch_length",
+      "is_root",
+      "incoming_branch_missing"
+    ],
+    "structure": [
+      "log_outdegree",
+      "normalized_depth",
+      "log_sibling_count",
+      "log_family_nodes",
+      "log_subtree_nodes",
+      "log_descendant_leaves",
+      "child_branch_mean",
+      "child_branch_std",
+      "child_branch_min",
+      "child_branch_max",
+      "child_branch_zero_fraction",
+      "child_ancestral_fraction",
+      "child_taxon_diversity",
+      "child_taxon_missing_fraction"
+    ],
+    "topology_subset": [
+      "log_outdegree",
+      "normalized_depth",
+      "log_sibling_count",
+      "log_family_nodes",
+      "log_subtree_nodes",
+      "log_descendant_leaves",
+      "child_ancestral_fraction"
+    ],
+    "branch_subset": [
+      "child_branch_mean",
+      "child_branch_std",
+      "child_branch_min",
+      "child_branch_max",
+      "child_branch_zero_fraction"
+    ],
+    "leave_one_group_out": {
+      "topology_position": [
+        "log_outdegree",
+        "normalized_depth",
+        "log_sibling_count"
+      ],
+      "descendant_scale": [
+        "log_family_nodes",
+        "log_subtree_nodes",
+        "log_descendant_leaves"
+      ],
+      "branch_context": [
+        "child_branch_mean",
+        "child_branch_std",
+        "child_branch_min",
+        "child_branch_max",
+        "child_branch_zero_fraction"
+      ],
+      "child_composition": [
+        "child_ancestral_fraction",
+        "child_taxon_diversity",
+        "child_taxon_missing_fraction"
+      ]
+    },
+    "group_only_models": {
+      "topology_position": "lineage_topology_only",
+      "descendant_scale": "lineage_scale_only",
+      "branch_context": "lineage_branch",
+      "child_composition": "lineage_composition_only"
+    }
+  },
+  "leakage_fields_excluded": [
+    "duplication_flag",
+    "event_type",
+    "event_type_raw",
+    "nhx_attributes",
+    "parent_event_type",
+    "raw_node_id"
+  ],
+  "source": {
+    "nodes_path": "F:\\PRIME\\experiments\\expand1_dna\\data\\PANTHER_nodes.csv",
+    "edges_path": "F:\\PRIME\\experiments\\expand1_dna\\data\\PANTHER_edges.csv",
+    "sha256": {
+      "nodes": "e44bde4a3125fd07e73dc48aec232a9ab8491e39bdb1b839cc1d41473868828f",
+      "edges": "dd45d61fd8ad0c8bccc372dfc6e62464e9e3405f04c96ce616910c912fba0c3d"
+    },
+    "audit_scope": "full",
+    "critical_checks_passed": true
+  },
+  "model": {
+    "hist_gradient_boosting": {
+      "max_iter": 100,
+      "max_leaf_nodes": 31,
+      "learning_rate": 0.08,
+      "l2_regularization": 1.0
+    },
+    "fusion_weight_range": [
+      0.0,
+      0.5
+    ],
+    "fusion_weight_step": 0.01,
+    "best_local_baseline": "local_hgb",
+    "selected_fusion_weight": 0.5
+  },
+  "extended_analysis": {
+    "status": "posthoc_robustness_not_used_for_primary_model_selection",
+    "permutation_scope": "within_family",
+    "permutation_repeats": 5,
+    "learning_fractions": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "split_sensitivity_seeds": [
+      42,
+      43,
+      44
+    ],
+    "calibration_bins": 10,
+    "ece_equal_width_bins": 15,
+    "subgroup_thresholds": "frozen_validation_thresholds"
+  },
+  "environment": {
+    "python": "3.12.4",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.8.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

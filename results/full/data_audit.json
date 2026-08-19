@@ -1,0 +1,145 @@
+{
+  "scope": "full",
+  "nodes_path": "F:\\PRIME\\experiments\\expand1_dna\\data\\PANTHER_nodes.csv",
+  "edges_path": "F:\\PRIME\\experiments\\expand1_dna\\data\\PANTHER_edges.csv",
+  "node_fields": [
+    "node_id",
+    "family_id",
+    "raw_node_id",
+    "label",
+    "node_type",
+    "is_root",
+    "event_type",
+    "event_type_raw",
+    "duplication_flag",
+    "species",
+    "organism_code",
+    "taxon_id",
+    "external_ids",
+    "branch_length",
+    "confidence",
+    "nhx_attributes",
+    "source_file"
+  ],
+  "edge_fields": [
+    "source_id",
+    "target_id",
+    "family_id",
+    "relation",
+    "parent_event_type",
+    "child_branch_length",
+    "source_file"
+  ],
+  "node_rows": 3564945,
+  "edge_rows": 3549262,
+  "families": 15683,
+  "target_rows": 1540340,
+  "node_types": {
+    "ancestral_gene": 1547755,
+    "extant_gene": 2017190
+  },
+  "event_types": {
+    "speciation": 1158521,
+    "duplication": 381819,
+    "<NULL>": 2017190,
+    "coded_event": 7415
+  },
+  "relation_types": {
+    "parent_of": 3549262
+  },
+  "node_null_rates": {
+    "node_id": 0.0,
+    "family_id": 0.0,
+    "raw_node_id": 0.0,
+    "label": 0.4341595732893495,
+    "node_type": 0.0,
+    "is_root": 0.0,
+    "event_type": 0.5658404267106505,
+    "event_type_raw": 0.5658404267106505,
+    "duplication_flag": 1.0,
+    "species": 0.6750241588579908,
+    "organism_code": 0.4341595732893495,
+    "taxon_id": 1.0,
+    "external_ids": 0.0,
+    "branch_length": 0.0043992263555258215,
+    "confidence": 1.0,
+    "nhx_attributes": 0.0,
+    "source_file": 0.0
+  },
+  "edge_null_rates": {
+    "source_id": 0.0,
+    "target_id": 0.0,
+    "family_id": 0.0,
+    "relation": 0.0,
+    "parent_event_type": 0.0,
+    "child_branch_length": 0.0,
+    "source_file": 0.0
+  },
+  "family_node_size": {
+    "min": 6.0,
+    "q25": 40.0,
+    "median": 100.0,
+    "q75": 235.0,
+    "q95": 849.0,
+    "q99": 2057.260000000002,
+    "max": 5718.0,
+    "mean": 227.31269527513868
+  },
+  "family_target_size": {
+    "min": 1.0,
+    "q25": 16.0,
+    "median": 45.0,
+    "q75": 106.0,
+    "q95": 369.0,
+    "q99": 863.1800000000003,
+    "max": 2491.0,
+    "mean": 98.21717783587324
+  },
+  "critical_totals": {
+    "duplicate_nodes": 0,
+    "endpoint_missing": 0,
+    "self_edges": 0,
+    "duplicate_parent": 0,
+    "family_mismatch": 0,
+    "relation_mismatch": 0,
+    "event_copy_mismatch": 0,
+    "branch_copy_mismatch": 0,
+    "edge_count_mismatch": 0,
+    "declared_root_mismatch": 0,
+    "unreachable_nodes": 0
+  },
+  "source_file_consistency": true,
+  "leakage_blacklist": [
+    "duplication_flag",
+    "event_type",
+    "event_type_raw",
+    "nhx_attributes",
+    "parent_event_type",
+    "raw_node_id"
+  ],
+  "model_features": [
+    "incoming_branch_length",
+    "is_root",
+    "incoming_branch_missing",
+    "log_outdegree",
+    "normalized_depth",
+    "log_sibling_count",
+    "log_family_nodes",
+    "log_subtree_nodes",
+    "log_descendant_leaves",
+    "child_branch_mean",
+    "child_branch_std",
+    "child_branch_min",
+    "child_branch_max",
+    "child_branch_zero_fraction",
+    "child_ancestral_fraction",
+    "child_taxon_diversity",
+    "child_taxon_missing_fraction"
+  ],
+  "leakage_check_passed": true,
+  "critical_checks_passed": true,
+  "source_sha256": {
+    "nodes": "e44bde4a3125fd07e73dc48aec232a9ab8491e39bdb1b839cc1d41473868828f",
+    "edges": "dd45d61fd8ad0c8bccc372dfc6e62464e9e3405f04c96ce616910c912fba0c3d"
+  }
+}
