@@ -1,7 +1,7 @@
-cache/
-results/quick/
-figures/quick/
-results/full/test_predictions.csv.gz
-data/*.csv
-__pycache__/
-.pytest_cache/
+expand1_dna/cache/
+expand1_dna/results/quick/
+expand1_dna/figures/quick/
+expand1_dna/results/full/test_predictions.csv.gz
+expand1_dna/data/*.csv
+expand1_dna/__pycache__/
+expand1_dna/.pytest_cache/
