@@ -1,0 +1,7 @@
+cache/
+results/quick/
+figures/quick/
+results/full/test_predictions.csv.gz
+data/*.csv
+__pycache__/
+.pytest_cache/
